@@ -1,0 +1,21 @@
+{% extends "Maestros/padre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+<p>
+    {% for i in User %}
+        
+        <p>Nombre: {{i.nombre}}</p>
+        <p>Apellido: {{i.apellido}}</p>  
+        <p>Email: {{i.email}}</p>
+        
+        <p> </p>
+        
+    {% endfor %} 
+    <br>   
+</p>
+<p>
+  <a href="{% url 'editar_perfil' %}">Editar perfil</a>
+ 
+
+</p>
+{% endblock %}

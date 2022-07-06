@@ -1,0 +1,17 @@
+{% extends "Maestros/padre.html" %}
+{% load static %}
+{% block section_name %}
+<h3>Editar perfil</h3>
+{% endblock %}
+{% block contenidoQueCambia %}
+<form method="POST">{% csrf_token %}
+  <h1>Editar perfil de {{user}}</h1>
+  {{ form.as_p }}
+  <button type="submit" value="Enviar">Guardar</button>
+
+ 
+</form>
+<br/>
+<br/>
+<p><a href="{% url 'inicio' %}">Volver al inicio</a></p> 
+{% endblock %}
